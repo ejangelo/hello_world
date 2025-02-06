@@ -22,3 +22,6 @@ Thumbs.db
 .env.test
 .env.development
 .env.production
+
+# Rspec
+.rspec_status
