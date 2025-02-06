@@ -1,3 +1,3 @@
-x = {
-    "hello" => "world",
-}
+# frozen_string_literal: true
+
+# TODO

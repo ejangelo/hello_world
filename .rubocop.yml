@@ -2,8 +2,10 @@ require:
   - rubocop-rspec
   - rubocop-rake
 
+inherit_from:
+  - rubocop.yml
+
 AllCops:
-  TargetRubyVersion: 3.4
-  NewCops: enable
+  SuggestExtensions: false
   Exclude:
     - '.git/**/*'
