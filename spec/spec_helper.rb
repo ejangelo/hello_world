@@ -8,7 +8,7 @@ SimpleCov.start do
 end
 
 Dir[File.join(Dir.pwd, "lessons/**/*.rb")].each { |f| require f }
-# Dir[File.join(Dir.pwd, 'spec/support/**/*.rb')].each { |f| require f }
+Dir[File.join(Dir.pwd, "spec/support/**/*.rb")].each { |f| require f }
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -21,15 +21,5 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 
-  # config.before(:suite) do
-  #   Time.zone = 'Eastern Time (US & Canada)'
-  # end
-
-  config.around do |example|
-    Time.use_zone(Time.zone) do
-      example.run
-    end
-  end
-
-  # config.include SomeHelpers
+  config.include(TestHelpers)
 end
