@@ -6,7 +6,7 @@
 module StdoutRedirectorService
   class << self
     def call
-      raise ArgumentError, 'no block was provided' unless block_given?
+      raise ArgumentError, "no block was provided" unless block_given?
 
       # The output stream must be an IO-like object. In this case we capture it in
       # an in-memory IO object so we can return the string value. Any IO object can

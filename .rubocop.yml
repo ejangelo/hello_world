@@ -9,3 +9,6 @@ AllCops:
   SuggestExtensions: false
   Exclude:
     - '.git/**/*'
+
+RSpec/DescribeClass:
+  Enabled: false
