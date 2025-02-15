@@ -10,9 +10,13 @@ module TestHelpers
   end
 
   def stub_gets(and_return:)
-    allow($stdin).to(receive(:gets)) do
-      and_return.is_a?(Array) ? and_return.shift : and_return
+    return_value = and_return.is_a?(Array) ? and_return : [and_return]
+    Object.define_method(:gets) do
+      instance_exec { return_value.shift }
     end
+    # allow($stdin).to(receive(:gets)) do
+    #   and_return.is_a?(Array) ? and_return.shift : and_return
+    # end
     # stdin_mock = instance_double($stdin)
     # allow($stdin).to(receive(:gets)).with(anything).and_return(and_return_value)
 

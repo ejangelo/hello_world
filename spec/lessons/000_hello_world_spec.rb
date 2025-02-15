@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-RSpec.describe("Hello World") do
-  it "output the correct answer" do
-    lesson_output = get_lesson_output("lessons/000_hello_world.rb")
+RSpec.describe("Ruby 'Hello world!'") do
+  subject(:test) { Engine::Test.run!("lessons/000_hello_world.rb") }
 
-    expect(lesson_output).to(eq("Hello World!"))
+  it "outputs the correct answer" do
+    expect { test }.to(output("Hello World!").to_stdout)
   end
 end
