@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe("Ruby Array") do
+RSpec.describe("Ruby Array Class") do
   subject(:test) { Engine::Test.new("lessons/040_array.rb") }
 
   it "outputs the correct answer" do

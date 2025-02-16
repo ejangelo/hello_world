@@ -19,7 +19,7 @@ Thumbs.db
 
 # Ignore dotenv or other environment config files
 .env
-.env.test
+# .env.test
 .env.development
 .env.production
 

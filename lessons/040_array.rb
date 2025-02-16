@@ -13,7 +13,7 @@
 # !
 #
 # Resources:
-# Ruby `Array` class: https://ruby-doc.org/3.3.7/Array.html
+# Ruby `Array` class: https://ruby-doc.org/3.4.1/Array.html
 
 proc do
   # TODO: Add your code here

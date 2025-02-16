@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe("Ruby if...else...end keywords") do
-  subject(:test) { Engine::Test.new("lessons/030_if_else_end.rb") }
+  subject(:test) { Engine::Test.new("lesson_answers/030_if_else_end.rb") }
 
   context "when the user enters 'Hello!'" do
     it "outputs the correct answer" do

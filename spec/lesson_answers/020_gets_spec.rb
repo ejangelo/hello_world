@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe("Ruby gets method") do
-  subject(:test) { Engine::Test.new("lessons/020_gets.rb") }
+  subject(:test) { Engine::Test.new("lesson_answers/020_gets.rb") }
 
   it "outputs the correct answer" do
     stub_gets(and_return: "Hello World!")
