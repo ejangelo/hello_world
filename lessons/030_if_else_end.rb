@@ -12,10 +12,4 @@
 
 proc do
   # TODO: Add your code here
-  input = gets.chomp
-  if input == "Hello!"
-    puts "Goodbye!"
-  else
-    puts "I don't understand!"
-  end
 end

@@ -24,15 +24,4 @@
 
 proc do
   # TODO: Add your code here
-  array = ["Hello", "World", "!"]
-  array.each do |element|
-    puts element
-  end
-
-  # Alternate approaches
-  # array.each { |element| puts element }
-  # Ruby (v3.4) `it` keyword: https://docs.ruby-lang.org/en/3.4/Proc.html#class-Proc-label-it
-  #                           also: https://rubyreferences.github.io/rubychanges/3.4.html#standalone-it-in-blocks-became-anonymous-argument
-  #                           also: https://kevinjmurphy.com/posts/what-is-it-in-ruby-34/
-  # array.each { puts it }
 end

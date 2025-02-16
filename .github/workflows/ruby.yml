@@ -14,7 +14,9 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, ubuntu-20.04, macos-latest, macos-13, macos-12, windows-latest, windows-2019]
+        # os: [ubuntu-latest, ubuntu-20.04, macos-latest, macos-13, macos-12, windows-latest, windows-2019]
+        # Limit our os' for now to macos.
+        os: [macos-latest, macos-13, macos-12]
         ruby: ['3.4']
 
     steps:

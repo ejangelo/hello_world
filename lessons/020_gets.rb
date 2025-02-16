@@ -9,5 +9,4 @@
 proc do
   print "Enter something using your keyboard and then hit return: " unless ENV["APP_ENV"] == "test"
   # TODO: Add your code here
-  puts gets.chomp
 end

@@ -17,6 +17,4 @@
 
 proc do
   # TODO: Add your code here
-  array = ["Hello", "World", "!"]
-  puts array
 end
