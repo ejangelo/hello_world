@@ -2,8 +2,13 @@
 
 source "https://rubygems.org"
 
-gem "bundler", ">= 2.5", "< 3.0"
-gem "rake", ">= 13.0", "< 14.0"
+gem "bundler"
+gem "dotenv"
+gem "irb"
+gem "ostruct"
+gem "pry-byebug"
+gem "rake"
+gem "reline"
 
 group :development do
   gem "reek"
@@ -15,12 +20,4 @@ end
 group :test do
   gem "rspec"
   gem "simplecov"
-end
-
-group :development, :test do
-  gem "dotenv"
-  gem "irb"
-  gem "ostruct"
-  gem "pry-byebug"
-  gem "reline"
 end

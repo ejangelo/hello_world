@@ -1,0 +1,41 @@
+name: Ruby
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        # os: [ubuntu-latest, ubuntu-20.04, macos-latest, macos-13, macos-12, windows-latest, windows-2019]
+        # Limit our os' for now to macos.
+        os: [macos-latest, macos-13, macos-12]
+        ruby: ['3.4']
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+
+      - name: Update RubyGems
+        run: gem update --system
+
+      - name: Disable bundler frozen setting
+        run: bundle config set frozen false
+
+      - name: Install dependencies
+        run: bundle install
+
+      - name: Run tests
+        run: bundle exec rspec spec/lesson_answers

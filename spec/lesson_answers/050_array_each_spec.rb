@@ -1,0 +1,9 @@
+# frozen_string_literal: true
+
+RSpec.describe("Ruby Array#each iterator") do
+  subject(:test) { Engine::Test.new("lesson_answers/050_array_each.rb") }
+
+  it "outputs the correct answer" do
+    expect { test.run! }.to(output("Hello\nWorld\n!\n").to_stdout)
+  end
+end

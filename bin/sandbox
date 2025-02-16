@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+echo "Running sandbox..."
+echo
+
+ruby playground/sandbox.rb
+
+echo
+echo "Done."

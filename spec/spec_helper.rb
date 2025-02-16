@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require "dotenv"
+Dotenv.load(".env.test")
+
 require "pry-byebug"
 require "simplecov"
 
@@ -7,6 +10,7 @@ SimpleCov.start do
   add_filter "spec"
 end
 
+Dir[File.join(Dir.pwd, "engine/**/*.rb")].each { |f| require f }
 Dir[File.join(Dir.pwd, "lessons/**/*.rb")].each { |f| require f }
 Dir[File.join(Dir.pwd, "spec/support/**/*.rb")].each { |f| require f }
 
