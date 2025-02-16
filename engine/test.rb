@@ -2,14 +2,6 @@
 
 module Engine
   class Test
-    class << self
-      def run!(lesson_path)
-        new(lesson_path).run!
-      end
-    end
-
-    private
-
     def initialize(lesson_path)
       method_body = Kernel.eval(File.read(lesson_path), TOPLEVEL_BINDING, lesson_path)
 
