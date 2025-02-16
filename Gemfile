@@ -2,12 +2,12 @@
 
 source "https://rubygems.org"
 
-gem "bundler", ">= 2.5", "< 3.0"
+gem "bundler"
 gem "dotenv"
 gem "irb"
 gem "ostruct"
 gem "pry-byebug"
-gem "rake", ">= 13.0", "< 14.0"
+gem "rake"
 gem "reline"
 
 group :development do

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+echo "Running lesson $1..."
+echo
+
+ruby -e "require_relative 'engine/test'; Engine::Test.new('$1').run!"
+
+echo
+echo "Done."
