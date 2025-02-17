@@ -6,5 +6,6 @@
 # Ruby `puts` method: https://ruby-doc.org/3.4.1/Kernel.html#method-i-puts
 
 proc do
-  # TODO: Add your code here
+  # TODO: Add your code here 
+  puts "Hello World!"
 end

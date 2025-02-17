@@ -8,4 +8,6 @@
 
 proc do
   # TODO: Add your code here
+  # puts "Hello World!"
+  print "Hello World!"
 end
